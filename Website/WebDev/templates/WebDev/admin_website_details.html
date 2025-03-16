@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% extends 'WebDev/base.html' %}
+<html lang="en">
+{% load static %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Website Details</title>
+</head>
+<a href="{% url 'home' %}" class="admin-button" style="position:absolute; right: 1%; top:1%; color: #ffffff;  background-color: #04AA6D;">Log out</a>
+
+<!-- CRUD -->
+ <!-- Create -->
+ <form method="post" action="{%url 'admin_website_details' %}">
+{% csrf_token %}
+<table class = "table table-bordered table-light"> 
+    <tr><th>Client ID</th><th>Assigned Developer</th><th>Website Name</th><th>Website Type </th><th>Website Status</th><th>Due Date</th><th>Website ID</th><th>##############</th></tr>
+    {% if not form.instance.WebsiteID %}
+    <tr>
+        {%include 'Webdev/web_save.html' %}
+    </tr>
+    {% endif %}
+    <!-- Read -->
+    {% for x in details %}
+    
+        <tr>
+            {% if form.instance.WebsiteID == x.WebsiteID %}
+            {%include 'Webdev/web_save.html' %}
+            {% else %}
+
+            <td>{{x.ClientID}}</td>
+            <td>{{x.DeveloperID}}</td>
+            <td>{{x.WebsiteName}}</td>
+            <td>{{x.WebsiteType}}</td>
+            <td>{{x.WebsiteStatus}}</td>
+            <td>{{x.DueDate}}</td>
+            <td>{{x.WebsiteID}}</td>
+            <td>
+                <!-- Update -->
+                <button formnovalidate class="btn btn-success" name="web_edit" value = "{{x.WebsiteID}}">Edit</button>
+                <!-- Delete -->
+                <button formnovalidate class="btn btn-danger" name="web_delete" value = "{{x.WebsiteID}}">Delete</button>
+            </td>
+            {% endif %}
+        </tr>
+    {% endfor %}
+    </table>
+</form>
+{% endblock %} 
+
+             
