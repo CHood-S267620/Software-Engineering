@@ -1,11 +1,5 @@
 
-.home-body {
-  background-color: #d8a576;
-  background-size: 100px 80px;
-  height: 2000px;;
-  z-index: -10;
-  background: linear-gradient(180deg, #d8a576 40%, #fff5e8 50%);
-}
+
 
 .title {
   font-family: "Times New Roman", Times, serif;
@@ -17,21 +11,12 @@
   position: relative;
 }
 h1 {
-  font-family: "Times New Roman", Times, serif;
-  text-decoration-line: underline;
+  font-family: "Times New Roman", Times, serif; text-decoration-line: underline;
 }
 h2 {
   font-family: "Times New Roman", Times, serif;
 }
 
-.title-bar {
-  position: absolute;
-  height: 10%;
-  width: 100%;
-  background-color: #7a4d19;
-  top:0%;
-  z-index: -10;
-}
 
 .bottom-bar {
   position: absolute;
@@ -44,23 +29,12 @@ h2 {
 
 .box1 {
 
-  height: 300px;
-  width: 500px;
-  background-color: #e0b97e;
-  position: absolute;
-  left: 5%;
-  margin-top: 250px;
+  height: 300px;width: 500px;background-color: #e0b97e;position: absolute;left: 5%;margin-top: 250px;
   
 }
 
 .box2 {
-
-  height: 300px;
-  width: 500px;
-  background-color: #e0b97e;
-  position: absolute;
-  left: 37%;
-  margin-top: 250px;
+height: 300px;width: 500px;background-color: #e0b97e;position: absolute;left: 37%;margin-top: 250px;
   
 }
 

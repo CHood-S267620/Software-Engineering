@@ -14,7 +14,8 @@ urlpatterns = [
     path('client_website_details', views.client_website_details, name='client_website_details'),  # website details
     path('admin_website_details', views.admin_website_details, name='admin_website_details'),  # admin website details
     path('admin_billing', views.admin_billing, name='admin_billing'),  # admin billing details
-     path('client_billing', views.client_billing, name='client_billing'),  # client billing  details
+    path('client_billing', views.client_billing, name='client_billing'),  # client billing  details
+    
 
 ]
 
