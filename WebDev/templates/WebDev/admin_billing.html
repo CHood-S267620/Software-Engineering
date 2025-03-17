@@ -18,7 +18,10 @@
     <tr><th>Client ID</th><th>Amount Owed</th><th>Payment Status</th><th>Billing ID</th><th>##############</th></tr>
     {% if not form.instance.BillingID %}
     <tr>
-        {%include "Webdev/bill_save.html" %}
+        {%for field in form%}
+        <td>{{ field }}</td>
+    {%endfor%}
+    <td><button class="btn btn-primary" name="bill_save" value = "{{x.BillingID}}">Save </button></td>
     </tr>
     {% endif %}
     <!-- Read -->
@@ -26,7 +29,10 @@
     
         <tr>
             {% if form.instance.BillingID == x.BillingID %}
-            {%include "Webdev/bill_save.html" %}
+            {%for field in form%}
+            <td>{{ field }}</td>
+            {%endfor%}
+            <td><button class="btn btn-primary" name="bill_save" value = "{{x.BillingID}}">Save </button></td>
             {% else %}
 
             <td>{{x.ClientID}}</td>

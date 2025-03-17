@@ -18,7 +18,10 @@
     <tr><th>Client ID</th><th>Assigned Developer</th><th>Website Name</th><th>Website Type </th><th>Website Status</th><th>Due Date</th><th>Website ID</th><th>##############</th></tr>
     {% if not form.instance.WebsiteID %}
     <tr>
-        {%include 'Webdev/web_save.html' %}
+        {%for field in form%}
+        <td>{{ field }}</td>
+    {%endfor%}
+    <td><button class="btn btn-primary" name="web_save" value = "{{x.WebsiteID}}">Save </button></td>
     </tr>
     {% endif %}
     <!-- Read -->
@@ -26,7 +29,10 @@
     
         <tr>
             {% if form.instance.WebsiteID == x.WebsiteID %}
-            {%include 'Webdev/web_save.html' %}
+            {%for field in form%}
+        <td>{{ field }}</td>
+    {%endfor%}
+    <td><button class="btn btn-primary" name="web_save" value = "{{x.WebsiteID}}">Save </button></td>
             {% else %}
 
             <td>{{x.ClientID}}</td>
