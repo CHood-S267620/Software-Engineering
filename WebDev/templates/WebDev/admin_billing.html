@@ -18,7 +18,7 @@
     <tr><th>Client ID</th><th>Amount Owed</th><th>Payment Status</th><th>Billing ID</th><th>##############</th></tr>
     {% if not form.instance.BillingID %}
     <tr>
-        {%include 'Webdev/bill_save.html' %}
+        {%include "Webdev/bill_save.html" %}
     </tr>
     {% endif %}
     <!-- Read -->
@@ -26,7 +26,7 @@
     
         <tr>
             {% if form.instance.BillingID == x.BillingID %}
-            {%include 'Webdev/bill_save.html' %}
+            {%include "Webdev/bill_save.html" %}
             {% else %}
 
             <td>{{x.ClientID}}</td>
