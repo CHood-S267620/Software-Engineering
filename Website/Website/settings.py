@@ -118,7 +118,7 @@ USE_TZ = True
 
 import os 
 STATIC_URL = 'static/'
-STATIC_ROOT= os.path.join(BASE_DIR, 'Website/Website/WebDev/static')
+STATIC_ROOT= os.path.join(BASE_DIR, 'C:\Users\Cameron\Documents\Uni stuff\Year 2\Software Eng\Website\WebDev\static')
 STATICFILES_DIR = {
     os.path.join(BASE_DIR, 'public/static')
 }
