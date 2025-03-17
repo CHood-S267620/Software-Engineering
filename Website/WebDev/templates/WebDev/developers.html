@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <title>Developers</title>
 </head>
-<a href="{% url 'home' %}" class="btn btn-success" style="position:absolute; right: 1%; top:1%; color: #ffffff;  background-color: #04AA6D;">Log out</a>
+<a href="{% url 'home' %}" class="admin-button" style="position:absolute; right: 1%; top:1%; color: #ffffff;  background-color: #04AA6D;">Log out</a>
 
 <!-- CRUD -->
  <!-- Create -->
@@ -18,10 +18,7 @@
     <tr><th>First Name</th><th>Last Name</th><th>Gender</th><th>Email</th><th>Mobile Number</th><th>Home Number</th><th>Employee ID</th><th>##############</th></tr>
     {% if not form.instance.DeveloperID %}
     <tr>
-        {%for field in form%}
-        <td>{{ field }}</td>
-    {%endfor%}
-    <td><button class="btn btn-primary" name="save" value = "{{x.DeveloperID}}">Save </button></td>
+        {%include 'Webdev/dev_save.html' %}
     </tr>
     {% endif %}
     <!-- Read -->
@@ -29,10 +26,7 @@
     
         <tr>
             {% if form.instance.DeveloperID == x.DeveloperID %}
-            {%for field in form%}
-            <td>{{ field }}</td>
-            {%endfor%}
-            <td><button class="btn btn-primary" name="save" value = "{{x.DeveloperID}}">Save </button></td>
+            {%include 'Webdev/dev_save.html' %}
             {% else %}
 
             <td>{{x.FirstName}}</td>
