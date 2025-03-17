@@ -12,9 +12,9 @@ urlpatterns = [
     path('admin_login', views.admin_login, name='admin_login'),              # admin login
     path('admin_dashboard', views.admin_dash, name='admin_dashboard'),
     path('client_website_details', views.client_website_details, name='client_website_details'),  # website details
-    path('admin_website_details', views.admin_website_details, name='admin_website_details'),  # website details
-    path('admin_billing', views.admin_billing, name='admin_billing'),  # website details
-     path('client_billing', views.client_billing, name='client_billing'),  # website details
+    path('admin_website_details', views.admin_website_details, name='admin_website_details'),  # admin website details
+    path('admin_billing', views.admin_billing, name='admin_billing'),  # admin billing details
+     path('client_billing', views.client_billing, name='client_billing'),  # client billing  details
 
 ]
 
