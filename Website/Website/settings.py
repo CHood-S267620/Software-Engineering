@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+#-----------------------------------------------------------------------------------------------------------------------
 ROOT_URLCONF = 'Website.urls'
 
 TEMPLATES = [
@@ -67,7 +67,7 @@ TEMPLATES = [
         },
     },
 ]
-
+#-------------------------------------------------------------------------------------------------------------------------------------
 WSGI_APPLICATION = 'Website.wsgi.application'
 
 
@@ -119,6 +119,8 @@ USE_TZ = True
 import os 
 STATIC_URL = '/static/'
 STATIC_ROOT= os.path.join(BASE_DIR, 'staticfiles')
+print(STATIC_ROOT)
+print(BASE_DIR)
 STATICFILES_DIR = {
     os.path.join(BASE_DIR, 'public/static')
 }
