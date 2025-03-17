@@ -15,6 +15,13 @@ from .models import *
 def home(response):
     return render(response, 'WebDev/index.html')
 
+
+def bill_save(response):
+    return render(response, 'WebDev/admin_billing.html.html')
+
+def dev_save(response):
+    return render(response, 'WebDev/dev_save.html.html')
+
 # admin  dash view
 def admin_dash(response):
     return render(response, 'WebDev/admin_dashboard.html')
