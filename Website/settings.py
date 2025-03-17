@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 #-----------------------------------------------------------------------------------------------------------------------
-ROOT_URLCONF = 'Website.Website.urls'
+ROOT_URLCONF = 'Website.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 #-------------------------------------------------------------------------------------------------------------------------------------
-WSGI_APPLICATION = 'Website.Website.wsgi.application'
+WSGI_APPLICATION = 'Website.wsgi.application'
 
 
 # Database
@@ -117,7 +117,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 import os 
-STATIC_URL = '/Software-Engineering/Website/WebDev/static/'
+STATIC_URL = '/static/'
 STATIC_ROOT= os.path.join(BASE_DIR, 'staticfiles')
 print(STATIC_ROOT)
 print(BASE_DIR)
