@@ -14,12 +14,19 @@ class Developers(models.Model):
   def __str__(self):
     return '%s %s %s' % (self.FirstName, self.LastName, self.DeveloperID)
   
+
+
+CHOICES = (
+    ('Pending','Pending'),
+    ('Paid', 'Paid'),
+)
+
 # Billing Table
 class Billing(models.Model):
   BillingID = models.BigAutoField(auto_created=True, primary_key=True, blank=False, unique=True)
   ClientID = models.ForeignKey(User, on_delete=models.CASCADE)
   AmountOwed = models.DecimalField(max_digits=100, decimal_places=2, blank=False)
-  PaymentStatus = models.CharField(max_length=255, blank=False)
+  PaymentStatus = models.CharField(max_length=255,choices=CHOICES, blank=False)
   def __str__(self):
     return '%s ' % (self.ClientID)
 
